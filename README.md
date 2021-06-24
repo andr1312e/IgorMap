@@ -1,2 +1,2 @@
 # Russia Tiles Server
- Simple and Quic Tile Server with maps of Russia
+ Simple and Quik Tile Server with maps of Russia
