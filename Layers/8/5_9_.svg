@@ -1,0 +1,292 @@
+256569@
+  <path transform="rotate(275, 411.9 , 137.6)"  d="m390.4 137.6 1.7-7.9h1.3l.8 6.4 3.6-6.4h1.4l-1.6 7.9h-1l1-4.7.4-1.3.1-1-3.8 7.1h-.7l-.9-7.1-.1.8-.1.6-.2.8-1 4.8zm11 0c-.6.1-1.1.1-1.3-.3-.2-.5-.4-1-.4-1.6l.3-1.7c.1-.4.3-.9.6-1.2.2-.4.4-.8.9-1l1.1-.1c.4-.1.7-.1 1 .2l.4.7.6-1h.7l-1.3 6.1h-.8l.2-1.2-1.1.8c-.2.3-.6.4-.9.4zm.1-.6c.5-.1.7-.2.9-.4l.7-.8c.3-.4.4-.8.5-1.2l.2-.5v-.5c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-.8-.3-.3 0-.5 0-.7.2l-.7.8-.4 1-.2 1.3c0 .3.1.7.3.9 0 .2.4.3.6.3zm3.7 3.2 1.8-8.5h.8l-.1 1 .9-.7c.3-.3.7-.4 1.1-.4.5 0 .9.1 1.2.4.1.4.4.9.4 1.6 0 .4 0 1-.3 1.4 0 .6-.2 1.1-.5 1.4-.2.4-.5.7-.9 1l-1.2.2c-.4.1-.7 0-1-.2l-.4-.7-.2.5v.5l-.7 2.5zm3.1-3.2c.3-.1.7-.2.8-.4.3-.2.5-.4.7-.8l.4-1 .1-1.2c0-.8-.3-1.2-1-1.2l-.6.2-.7.8-.6 1-.2 1.3.3.9c.2.2.5.3.8.3zm5.7.7c-.5 0-.9-.1-1-.4-.5-.2-.7-.6-.7-1v-.7l.3-.3.7-3.6h1l-.8 3.7v1.3l.8.2.7-.3.8-.8.6-1.6.5-2.5h1.1l-1.4 5.9h-.8l.2-1.1h-.1l-.5.5-.6.5-.9.2zm8.2-6.8c-.7 0-1.2-.1-1.4-.4-.2-.2-.4-.5-.4-1v-.2h1.1l-.3.2c.1.2.1.5.3.5l.7.2c.4 0 .6 0 .9-.2.2-.1.3-.4.4-.8h1c-.3.5-.5 1-.8 1.2-.3.3-.9.6-1.5.6zm-2 6.8c-.3 0-.6-.1-.9-.4-.4-.2-.5-.6-.5-1v-.7l.2-.3.7-3.6h1l-.8 3.7-.1.6c0 .4 0 .5.2.7l.6.2.8-.3.8-.8.5-1.6.6-2.5h1l-1.3 5.9h-.8l.1-1.1-.5.5-.8.5-.7.2zm9.3 0c-.8 0-1.5-.2-2-.4v-1l1 .4.9.1c.9 0 1.6-.3 2.1-.8.3-.5.6-1.2.8-2H429l.3-1h3.2v-.4c0-.7-.1-1.1-.4-1.6-.4-.3-.8-.5-1.4-.5h-1l-.7.4-.3-.9 1-.3.9-.1c1.2 0 1.8.3 2.2.8.6.5.8 1.2.8 2.2l-.3 1.9c-.1.5-.3 1.1-.7 1.5-.3.6-.6 1-1.3 1.3-.5.2-1.1.4-2 .4zm4.2 0h-.2l-.2-.2v-.8l.3.1c.4 0 .5 0 .6-.2.2-.2.4-.4.5-.8l.5-1.3.5-1.3.5-.9.8-.5 1-.2h.7l.7.3-1.2 5.7h-1l1-5.1H437l-.4.9-.5 1.4-.6 1.6-.7 1-1 .1zm0-.1" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#d" x="390" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#e" x="399.2" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#f" x="405.5" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#g" x="411.8" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#h" x="418.2" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#glyph0-6" x="424.6" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#i" x="427.4" y="137.6" fill="#7f577e"/>
+  <use transform="rotate(275, 411.9 , 137.6)"  xlink:href="#j" x="433.8" y="137.6" fill="#7f577e"/>
+  <path style="comp-op:darken" d="M5.6 3c0 1.4-1.2 2.6-2.6 2.6C1.6 5.6.4 4.4.4 3 .4 1.6 1.6.4 3 .4 4.4.4 5.6 1.6 5.6 3zm0 0" transform="translate(24.8 178)" fill="#f9f9f7" stroke-width=".8" stroke="#6f6f5b"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="m-1.3 169.5-2.6 3.1L-1 176h-1.2l-2.8-3.3v3.2h-1v-3.2l-2.8 3.2H-10l3-3.3-2.8-3.1h1.2l2.6 3.1v-3.1h1v3.1l2.6-3.1zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M1 169.5v2.7h3.7v-2.7h.9v6.4h-1v-2.8H1v2.8H0v-6.4zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M8.7 169.5v4.9l-.2.6 3.5-5.5h1.3v6.4h-1v-5.3L9 175.9H7.7v-6.4zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M20.6 166.8c0 .6-.3 1-.6 1.4-.4.3-1 .5-1.7.5-.8 0-1.3-.2-1.6-.5-.4-.2-.5-.8-.7-1.4h1.1c0 .5.2.8.3 1h1c.2.2.6.2.7-.1.3-.2.5-.4.5-.9zm-4.2 2.7v4.9l-.2.6 3.6-5.5H21v6.4h-1v-5.3l-3.3 5.3h-1.3v-6.4zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M33 176h-1.3v-4h-4.3v4h-1v-8.7h1v3.7h4.4v-3.6H33zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M40.7 172.7c0 1-.3 2-.8 2.5-.6.6-1.3.8-2.2.8-.6 0-1-.1-1.5-.3-.5-.3-.8-.7-1-1.2-.4-.5-.6-1-.6-1.8.1-1 .4-1.9.9-2.4.6-.6 1.3-1 2.2-1 .6.1 1.1.3 1.6.6.4.1.7.5 1 1 .3.5.4 1.1.4 1.8zm-4.9 0c0 .8.2 1.4.5 1.8.3.5.7.7 1.4.7s1.1-.2 1.5-.7c.3-.4.4-1 .4-1.8s-.1-1.3-.4-1.8c-.4-.4-.8-.6-1.5-.6-.6 0-1.1.2-1.4.6-.3.5-.5 1.1-.5 1.8zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M47.5 171.1c0 .4 0 .7-.3 1l-1 .4 1.2.5c.2.2.3.6.3 1 0 .6-.2 1-.6 1.4-.4.4-1 .6-2 .6h-2.7v-6.5H45c.6 0 1 0 1.4.2.3 0 .6.2.8.5.2.2.3.5.3 1zm-1 .2c0-.5-.1-.6-.5-.7 0-.2-.4-.2-.9-.2h-1.7v1.6H45c.9.1 1.5-.2 1.5-.7zm.1 2.7c0-.3 0-.6-.4-.7-.2-.3-.7-.3-1.2-.3h-1.6v2h2.8c.3-.3.4-.6.4-1zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M53.2 169.5v.9h-2.9v5.5h-1v-6.4zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M60 172.7c0 1-.4 2-1 2.5-.4.6-1 .8-2 .8-.6 0-1-.1-1.6-.3-.4-.3-.8-.7-1-1.2-.4-.5-.4-1-.4-1.8 0-1 .3-1.9.8-2.4.5-.6 1.2-1 2.2-1 .6.1 1 .3 1.5.6.5.1.8.5 1 1 .4.5.5 1.1.5 1.8zm-5 0c0 .8.3 1.4.6 1.8.2.5.7.7 1.4.7.6 0 1-.2 1.4-.7.3-.4.5-1 .5-1.8s-.2-1.3-.5-1.8c-.3-.4-.8-.6-1.4-.6-.7 0-1.2.2-1.5.6-.3.5-.4 1.1-.4 1.8zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M64.7 169.4c.8 0 1.3.3 1.9.8.4.6.7 1.4.7 2.5s-.2 2-.7 2.5c-.6.6-1.1.9-2 .9l-1.1-.3-.8-.8h-.1v3.8h-.9v-9.3h.8l.1.9.9-.7c.2-.2.7-.3 1.2-.3zm-.2.9c-.7 0-1.1.2-1.5.5-.2.4-.3 1-.3 1.7v.2c0 .8.1 1.4.3 1.8.3.5.8.7 1.5.7.4 0 .7-.2 1-.3.2-.3.4-.5.5-1 .2-.2.2-.6.2-1.1 0-.8-.1-1.4-.4-1.9-.3-.4-.7-.6-1.3-.6zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M74.6 172.7c0 1-.3 2-.8 2.5-.6.6-1.3.8-2.2.8-.6 0-1-.1-1.6-.3-.4-.3-.7-.7-1-1.2-.3-.5-.5-1-.5-1.8.1-1 .5-1.9.9-2.4.6-.6 1.3-1 2.2-1 .6.1 1.1.3 1.6.6.4.1.8.5 1 1 .3.5.4 1.1.4 1.8zm-4.9 0c0 .8.3 1.4.5 1.8.3.5.8.7 1.4.7.7 0 1.1-.2 1.4-.7.3-.4.5-1 .5-1.8s-.2-1.3-.5-1.8c-.3-.4-.7-.6-1.4-.6s-1.1.2-1.4.6c-.3.5-.5 1.1-.5 1.8zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 24.8 , 178)"  d="M81 169.5v5.5h1v3.2h-1v-2.3h-4.5v2.3h-1V175h.5c.5-.7 1-1.6 1.2-2.5.3-1 .4-2 .4-3zm-1 .8h-1.4c0 .7-.1 1.1-.3 1.7l-.5 1.7c-.2.5-.4 1-.7 1.3H80zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#k" x="-1" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#l" x="6.6" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#m" x="14.4" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#glyph1-4" x="22.1" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#n" x="25.2" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#o" x="34.1" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#p" x="41.4" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#q" x="48.3" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#o" x="53.3" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#r" x="60.6" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#o" x="68" y="175.9" fill="#222"/>
+  <use transform="rotate(275, 24.8 , 178)"  xlink:href="#s" x="75.2" y="175.9" fill="#222"/>
+  <path style="comp-op:darken" d="M5.6 3c0 1.4-1.2 2.6-2.6 2.6C1.6 5.6.4 4.4.4 3 .4 1.6 1.6.4 3 .4 4.4.4 5.6 1.6 5.6 3zm0 0" transform="translate(346.3 213.2)" fill="#f9f9f7" stroke-width=".8" stroke="#6f6f5b"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M324.1 230.5H323v-3.6l-1.3.4-1.3.2c-.8 0-1.5-.2-2-.6-.2-.3-.5-.9-.5-1.6V222h1.1v3.2c0 .4 0 .8.3 1 .2.2.6.3 1.2.3h1.2l1.3-.5v-4h1.1zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M328.8 224c.5 0 1 0 1.4.2.4.3.7.7.8 1.1.3.4.4 1 .4 1.5v.6H327c0 .8.2 1.3.6 1.7.3.4.8.6 1.4.6l1-.1 1.1-.4v1l-1 .3H329c-.6.1-1.1.1-1.6-.2-.5-.3-.8-.7-1.1-1.2-.3-.5-.4-1-.4-1.8.1-.7.1-1.3.4-1.8.2-.5.5-1 1-1.2.4-.2.9-.3 1.5-.3zm0 .7c-.7.1-1.1.2-1.3.6-.2.3-.5.7-.5 1.3h3.3c0-.5-.1-1-.4-1.3-.2-.4-.6-.5-1.2-.5zm-.1.1" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M332.7 226.6c0-1.4.3-2.5.6-3.3.5-.8 1.1-1.3 2.1-1.5l1.5-.3 1.4-.2.2 1h-1l-1 .3-.9.1c-.5.1-1 .4-1.2.8-.4.5-.5 1.1-.5 2l.5-.4.6-.5 1-.1c.8 0 1.4.3 1.8.8.6.5.8 1.2.8 2s-.2 1.5-.4 1.9c-.3.4-.6.8-1 1-.6.3-1.1.4-1.7.4-.8 0-1.5-.3-2-1s-.8-1.7-.8-3zm3 3.1c.5 0 1-.2 1.3-.5.3-.2.4-1 .4-1.7s0-1.2-.3-1.6c-.3-.4-.7-.5-1.2-.5-.4 0-.7 0-1 .2l-.7.4-.4.6v1.2l.5 1c0 .2.2.5.5.7l1 .2zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M345.8 227.2c0 1.1-.3 2-.8 2.5-.5.6-1.3.9-2.2.9-.5 0-1-.1-1.5-.4-.4-.3-.8-.6-1-1.1-.3-.5-.5-1.2-.5-1.9.1-1 .2-1.9.9-2.4.5-.6 1.2-.9 2.2-.9.5.1 1 .1 1.5.4.4.3.8.6 1 1.1.3.6.4 1.1.4 1.8zm-4.8 0c0 .8 0 1.4.4 1.8.3.5.8.7 1.6.7.5 0 .9-.2 1.3-.7.3-.4.4-1 .4-1.8 0-.7-.1-1.2-.4-1.8-.3-.4-.8-.6-1.5-.6-.6 0-1.1.2-1.4.6-.3.6-.4 1-.4 1.8zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M351.3 224h1.1l-2.7 3.1 3 3.4h-1.2l-3-3.3v3.3h-.9V224h.9v3.1zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M356.2 230.6c-.6 0-1.2-.1-1.5-.4-.5-.2-.8-.6-1-1-.4-.6-.6-1.2-.6-2.1l.5-1.6c.4-.6.7-1.1 1.1-1.2.5-.3 1-.4 1.6-.4l.8.1c.4 0 .7.2.8.3l-.3.7h-1.4c-1.2-.2-1.9.5-1.9 2.2 0 .8.2 1.4.5 1.8.2.5.8.7 1.4.7l.8-.1.8-.3v1l-.7.1h-1zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M361.8 224c.8 0 1.4 0 1.7.3.5.5.6 1.1.6 1.8v4.4h-.8l-.2-1c-.3.5-.6.8-1.1.9 0 .1-.4.2-1 .2s-1-.2-1.5-.6c-.5-.2-.6-.7-.6-1.3 0-.7.1-1.2.7-1.5.5-.4 1.4-.6 2.4-.6h1v-.4c0-.5 0-.9-.2-1.1-.3-.2-.6-.3-1.1-.3l-1 .1-.7.4-.4-.8 1-.5 1.2-.1zm1.2 3.2h-1l-1.6.6c-.3.2-.4.5-.4.9 0 .3 0 .6.3.8l.9.2c.5 0 1-.1 1.3-.4.5-.3.6-.8.6-1.4zm0 .1" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M369.1 224c.9 0 1.5.1 2 .6.4.7.7 1.5.7 2.6s-.3 2-.8 2.5c-.4.6-1.1.9-2 .9-.4 0-.8-.1-1-.3l-.9-.7v3.7h-1V224h.9v1l1-.8c.2-.2.6-.2 1.1-.2zm-.1.7c-.7.1-1.2.3-1.4.7-.3.3-.4.9-.6 1.6v.2c.1.8.3 1.4.5 1.9.3.4.8.6 1.5.6.4 0 .7-.1 1-.3l.4-.9.3-1.3c0-.7-.1-1.2-.4-1.7-.3-.5-.7-.7-1.3-.7zm0 .1" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <path transform="rotate(275, 346.3 , 213.2)"  d="M373.5 230.5V224h1v2.7h1.7c.8 0 1.4.1 1.8.3.4.4.6 1 .6 1.5s-.2 1-.6 1.4c-.3.4-1 .6-1.8.6zm6.2 0V224h1v6.5zm-5.2-.9h1.5c.5 0 1 0 1.2-.2.2-.2.4-.4.4-.8s-.1-.7-.4-.8c-.3-.2-.6-.3-1.1-.3h-1.6zm0 0" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#fff" stroke-opacity=".6" stroke-miterlimit="10"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#t" x="316.9" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#u" x="325.3" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#v" x="332" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#o" x="339.2" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#w" x="346.5" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#x" x="352.6" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#y" x="358.3" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#r" x="365.1" y="230.5" fill="#222"/>
+  <use transform="rotate(275, 346.3 , 213.2)"  xlink:href="#z" x="372.5" y="230.5" fill="#222"/>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

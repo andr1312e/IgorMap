@@ -32,6 +32,7 @@ class ThreadImageLoader : public QObject
     Q_OBJECT
 public:
     explicit ThreadImageLoader(QString &pathToSourceSvg, QString &pathToRenderedSvg, QString &fileType, int breite, int hohe);
+    ~ThreadImageLoader();
 signals:
     void start();
     void cleared();
@@ -42,10 +43,10 @@ public slots:
     void addThreadToQueue();
 private:
     QString noAzm="000";
-    QQueue<TileAndData> til_tilesQueue;
+    QQueue<TileAndData> *til_tilesQueue;
     QTimer *m_timer;
-    QQueue<QThread*> til_freeThreadsQueue;
-    QMap<QThread*, ImageLoader*> til_loadedMap;
+    QQueue<QThread*> *til_freeThreadsQueue;
+    QHash<QThread*, ImageLoader*> *til_loadedHash;
     void loadImagesFromQueue();
 };
 

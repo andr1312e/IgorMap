@@ -144,7 +144,7 @@ void TilesAnalyzer::searchIndices(  float currentLatitude,   float currentLongit
                         m_latAndLong->operator[](6).first=lastIndexLat-2;
                         m_latAndLong->operator[](7).first=lastIndexLat-1;
                         m_latAndLong->operator[](8).first=-1;
-                    }m_layer
+                    }
     }
     startIndex=0;
     //проверка границы по широте. ШИРОТА ВВЕРХ!!!!!!!!!!!

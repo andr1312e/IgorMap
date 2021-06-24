@@ -71,7 +71,7 @@ void Server::error()
 }
 void Server::execute(const QJsonObject &message)
 {
-//    qInfo()<<"Сервер принял сообщение";//Server get message
+    qInfo()<<"Сервер принял сообщение";//Server get message
     QVector<float> *coords=new QVector<float>(2);
     coords->operator[](0)=message.operator[]("latitude").toDouble();
     coords->operator[](1)=message.operator[]("longtitude").toDouble();
