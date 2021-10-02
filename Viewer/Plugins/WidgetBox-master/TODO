@@ -1,0 +1,6 @@
+* Fix isPageExpanded propery change in Qt Designer
+
+* Style category button (or panel) closer to Qt Creator (Designer) look 
+  or like to LibreOffice Writer Properties Tool Box on the right side
+
+Hope for community participation on these improvements.

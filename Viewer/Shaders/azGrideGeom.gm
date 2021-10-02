@@ -1,0 +1,25 @@
+#version 330
+
+layout( points ) in;
+layout( line_strip, max_vertices = 24 ) out;
+
+flat in vec4 nullPoint;
+
+void main() {
+    const float PI = 3.14159265359;
+
+    vec4 dVec = gl_in[0] - nullPoint;
+
+    float dAlpha = PI / 24.0;
+    for(int i = 0; i < 24; i++) {
+
+        gl_Position =
+            vec4(dVec.x * cos(dAlpha * float(i)),
+                 dVec.x * sin(dAlpha * float(i)),
+                 dVec.z, gl_in[0].w);
+        EmitVertex();
+
+    }
+
+    EndPrimitive();
+}
