@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/SC">
-        <file>SystemControlUI.qml</file>
-        <file>Button.qml</file>
-        <file>CustomRectangle.qml</file>
-        <file>ControlUI2.qml</file>
-        <file>DSP.qml</file>
-    </qresource>
-</RCC>
