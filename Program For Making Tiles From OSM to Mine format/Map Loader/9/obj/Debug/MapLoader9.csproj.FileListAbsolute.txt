@@ -1,0 +1,7 @@
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\bin\Debug\MapLoader9.exe.config
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\bin\Debug\MapLoader9.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\bin\Debug\MapLoader9.pdb
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\obj\Debug\MapLoader9.csprojAssemblyReference.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\obj\Debug\MapLoader9.csproj.CoreCompileInputs.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\obj\Debug\MapLoader9.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\9\obj\Debug\MapLoader9.pdb

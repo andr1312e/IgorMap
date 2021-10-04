@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Pilikin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Pilikin\\.nuget\\packages"
+    ]
+  }
+}

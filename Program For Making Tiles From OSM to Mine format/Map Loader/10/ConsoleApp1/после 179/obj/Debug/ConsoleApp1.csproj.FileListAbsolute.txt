@@ -1,0 +1,7 @@
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\bin\Debug\ConsoleApp1.exe.config
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\bin\Debug\ConsoleApp1.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\bin\Debug\ConsoleApp1.pdb
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\obj\Debug\ConsoleApp1.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\10\ConsoleApp1\после 179\obj\Debug\ConsoleApp1.pdb

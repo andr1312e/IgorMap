@@ -1,0 +1,20 @@
+Tile constisit with png and svg text
+2 Folders (MapNoText MapText)
+(MapNoText - tiles with no text to png to fast render)
+How to make png part:
+In folder with svg
+MapClearWorldsInFolder->Generate inskape command file to convert svg to png(command file 2 untitled)-> convert->using XnConvert (png to jpeg)->Move to svg tiles with text only
+Run command file
+How to make svg part:
+https://stackoverflow.com/questions/36197664/batch-converting-svg-to-png-in-inkscape-doesnt-work/69299670#69299670
+In folder with svg
+Run Programs correctng paths in programs
+DivSvgPlusScale->Generate inskape command file to InskapeFormat(command file 2 untitled)-->Include Image Into svg->(in inskape program) remove words that you don't want to see->Map Rotator(Here you can see the result(Render to Png Func)) (Don't forget to move pngs no text to rotate folder and with image folder)
+Run command file:
+https://stackoverflow.com/questions/36197664/batch-converting-svg-to-png-in-inkscape-doesnt-work/69299670#69299670
+Completed
+
+SVG Tiles you can get from my app, get osm tocken from OSM site cookies
+
+Star or stackowerflow plus please!
+Thanks

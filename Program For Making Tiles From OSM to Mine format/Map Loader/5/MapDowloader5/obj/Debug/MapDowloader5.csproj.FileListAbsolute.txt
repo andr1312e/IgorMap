@@ -1,0 +1,7 @@
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\bin\Debug\MapDowloader5.exe.config
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\bin\Debug\MapDowloader5.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\bin\Debug\MapDowloader5.pdb
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\obj\Debug\MapDowloader5.csprojAssemblyReference.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\obj\Debug\MapDowloader5.csproj.CoreCompileInputs.cache
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\obj\Debug\MapDowloader5.exe
+E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\5\MapDowloader5\obj\Debug\MapDowloader5.pdb

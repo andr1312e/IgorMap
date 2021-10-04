@@ -1,0 +1,16 @@
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.exe
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.deps.json
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.json
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.dev.json
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.dll
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ref\ConsoleApp1.dll
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.pdb
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.AssemblyReference.cache
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.dll
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
+E:\MAP 2.0\Programs\Maps Loader\netzwolf parser\netzwolf parser\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache
