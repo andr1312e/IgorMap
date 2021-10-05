@@ -6,8 +6,6 @@
 #include <QJsonDocument>
 #include <QTimer>
 
-#include <CommonEntities/global.h>
-
 
 class IncomingDataHandler : public QObject
 {

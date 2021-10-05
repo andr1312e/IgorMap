@@ -21,12 +21,6 @@
 class QOpenGLContext;
 
 
-enum WindowType {
-    MainWindow,
-    ExtraWindow4,
-
-};
-
 struct ColumnRow {
     ColumnRow() : column(0), row(0) {}
     ColumnRow(qint32 c, qint32 r) : column(c), row(r) {}
@@ -135,81 +129,6 @@ struct PolarVerticesOfQuad
 
     Polar2 leftBottom, rightBottom,
               leftTop, rightTop;
-};
-
-
-class GrideGL : public QObject {
-    Q_OBJECT
-public:
-    explicit GrideGL(QOpenGLFunctions_3_3_Core *func,
-                     const Camera *m_camera,
-                     const Camera *m_extraCamera,
-                     const SceneOptions *sceneOption,
-                     QOpenGLShaderProgram *prog,
-//                     ftCustom *font,
-                     float _depth,
-                     QObject *parent = nullptr);
-    void render();
-    void renderAzH();
-    void prepare();
-    void prepareAzH();
-    void updateText(const float &horizontalScale);
-    void updateMoveText();
-
-public slots:
-    void setGrideColor(QColor color);
-    void setTextColor(QColor color);
-
-    void setDistDiscret(const quint16 value);
-    void setAzDiscret(const quint16 value);
-    void setTextSize(const TextSizeAction flag, const float value);
-    void setAzMarkOnOff(bool flag);
-    void setDistMarkOnOff(bool flag);
-
-    void resetCameraSlot();
-
-private:
-    void calcCharPosition(quint16 &mode, OpenGLRectF &rectOfViewMatrix, QVector<QPair<quint32, quint32> > &resultVector);
-
-private:
-    QOpenGLFunctions_3_3_Core *glFunc;
-    const Camera *camera_ptr, *extraCamera_ptr;
-    const SceneOptions *sceneOptions;
-    QOpenGLShaderProgram *programGride, *programFont;
-//    ftCustom *fontDriver;
-    const float depth;
-
-    QOpenGLVertexArrayObject *vao, *vaoFont, *vaoFont2;
-    QOpenGLBuffer *vbo, *vboFont, *vboFont2;
-
-    quint32 fontBufferSize, fontBufferSize2,
-            charCount, charCount2;
-
-    QColor grideColor, textColor;
-
-    QVector<QPointF> centerOfText, centerOfText2;
-    QVector<QString> vectorOfText, vectorOfText2;
-
-    QVector<quint16> distStepDependOnScaleLevelVector;
-    QVector<QOpenGLVertexArrayObject*> vaoDependOnScaleLevel;
-    QVector<QOpenGLBuffer*> vboDependOnScaleLevel;
-    QVector<quint32> grideBufferSize;
-
-    QOpenGLVertexArrayObject *vaoAzGride;
-    QOpenGLBuffer *vboAzGride;
-    quint32 azGrideBufferSize;
-
-    GLfloat scaleText;
-    bool azMarkOn, distMarkOn;
-
-    quint32 hGrideIndicesCount, azGrideIndicesCount, hFontIndicesCount, azFontIndicesCount;
-    QOpenGLVertexArrayObject *azHPlotVAO, *azFontVAO, *hFontVAO;
-    QOpenGLBuffer *azHPlotVBO, *azFontVBO, *hFontVBO;
-
-    const float koeffAz;
-    float centerAz;
-
-
 };
 
 class MapGL : public QObject {
@@ -661,7 +580,6 @@ public:
     KTAGLData* ktaGLData() const { return ktaData; }
     TraceGLData* traceGLData() const { return traceData; }
     RayGLData* rayGLData() const { return rayData; }
-    GrideGL* grideData() const { return grideGL; }
     DSPGLData *dspGLData() const { return dspData; }
     MapGL *mapGLData() const { return mapGL; }
 
@@ -797,7 +715,6 @@ private:
 
     SharedSceneData sharedSceneData;
 
-    GrideGL *grideGL;
     KTAGLData *ktaData;
     TraceGLData *traceData;
     RayGLData *rayData;

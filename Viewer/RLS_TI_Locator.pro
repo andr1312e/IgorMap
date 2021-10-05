@@ -29,7 +29,6 @@ SOURCES += \
     Scene/camera.cpp \
     Scene/scene.cpp \
     TcpHandler/incomingdatahandler.cpp \
-    Widgets/ControlPanels/controlpanelwidget.cpp \
     Widgets/Map/mapdebugger.cpp \
     Widgets/basewidget.cpp \
     main.cpp \
@@ -45,7 +44,6 @@ HEADERS += \
     Scene/camera_p.h \
     Scene/scene.h \
     TcpHandler/incomingdatahandler.h \
-    Widgets/ControlPanels/controlpanelwidget.h \
     Widgets/Map/mapdebugger.h \
     Widgets/basewidget.h \
     uicontroller.h \

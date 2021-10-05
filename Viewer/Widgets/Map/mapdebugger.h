@@ -21,7 +21,7 @@ class MapDebugger : public BaseWidget
 
     Q_OBJECT
 public:
-    MapDebugger(QWidget *parent = nullptr);
+    MapDebugger(QWidget *parent);
 
 signals:
     void requestForNewMap(QJsonDocument doc);

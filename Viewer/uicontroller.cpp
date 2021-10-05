@@ -16,7 +16,7 @@ UIController::UIController(QObject *parent)
 
     backgroundWidget = new Widget(listOfScreens.at(index));
 
-    mapDebugger = new MapDebugger();
+    mapDebugger = new MapDebugger(nullptr);
     mapDebugger->setGeometry(1643, 700,
                              255, 255);
     mapDebugger->show();
@@ -29,6 +29,7 @@ UIController::UIController(QObject *parent)
 
 UIController::~UIController()
 {
+    delete mapDebugger;
     tcpThread->quit();
     tcpThread->wait(1000);
 }

@@ -1,80 +1,5 @@
 <RCC>
-    <qresource prefix="/">
-        <file>Resources/Icon/CurrentColorSwatch.png</file>
-        <file>Resources/Icon/ic_3d_mode2_off.png</file>
-        <file>Resources/Icon/ic_3d_mode2_on.png</file>
-        <file>Resources/Icon/ic_bio_sector_off.png</file>
-        <file>Resources/Icon/ic_bio_sector_on.png</file>
-        <file>Resources/Icon/ic_colorScheme_off.png</file>
-        <file>Resources/Icon/ic_colorScheme_on.png</file>
-        <file>Resources/Icon/ic_dsp_off.png</file>
-        <file>Resources/Icon/ic_dsp_on.png</file>
-        <file>Resources/Icon/ic_emitting_off.png</file>
-        <file>Resources/Icon/ic_emitting_on.png</file>
-        <file>Resources/Icon/ic_exit_off.png</file>
-        <file>Resources/Icon/ic_exit_on.png</file>
-        <file>Resources/Icon/ic_hide_widget.png</file>
-        <file>Resources/Icon/ic_history_off.png</file>
-        <file>Resources/Icon/ic_history_on.png</file>
-        <file>Resources/Icon/ic_it_off.png</file>
-        <file>Resources/Icon/ic_it_on.png</file>
-        <file>Resources/Icon/ic_kta_info_hidden.png</file>
-        <file>Resources/Icon/ic_kta_info_shown.png</file>
-        <file>Resources/Icon/ic_list_add_off.png</file>
-        <file>Resources/Icon/ic_list_add_on.png</file>
-        <file>Resources/Icon/ic_list_del_off.png</file>
-        <file>Resources/Icon/ic_list_del_on.png</file>
-        <file>Resources/Icon/ic_list_erase_all_on.png</file>
-        <file>Resources/Icon/ic_resize_fw_off.png</file>
-        <file>Resources/Icon/ic_resize_fw_on.png</file>
-        <file>Resources/Icon/ic_respondent_off.png</file>
-        <file>Resources/Icon/ic_respondent_on.png</file>
-        <file>Resources/Icon/ic_rt2_off.png</file>
-        <file>Resources/Icon/ic_rt2_on.png</file>
-        <file>Resources/Icon/ic_settings_users_off.png</file>
-        <file>Resources/Icon/ic_settings_users_on.png</file>
-        <file>Resources/Icon/ic_show_widget.png</file>
-        <file>Resources/Icon/ic_signalNoiseRatio_off.png</file>
-        <file>Resources/Icon/ic_signalNoiseRatio_on.png</file>
-        <file>Resources/Icon/ic_state_system3_off.png</file>
-        <file>Resources/Icon/ic_state_system3_on.png</file>
-        <file>Resources/Icon/ic_table_hide.png</file>
-        <file>Resources/Icon/ic_table_show.png</file>
-        <file>Resources/Icon/ic_targeting_off.png</file>
-        <file>Resources/Icon/ic_targeting_on.png</file>
-        <file>Resources/Icon/ic_trace_off.png</file>
-        <file>Resources/Icon/ic_trace_on.png</file>
-        <file>Resources/Icon/ic_track_list_hidden.png</file>
-        <file>Resources/Icon/ic_track_list_shown.png</file>
-        <file>Resources/Icon/LightingIcon.png</file>
-        <file>Resources/Icon/llfr_ic_flash_back_off.png</file>
-        <file>Resources/Icon/llfr_ic_flash_back_on.png</file>
-        <file>Resources/Icon/llfr_ic_flash_forward_off.png</file>
-        <file>Resources/Icon/llfr_ic_flash_forward_on.png</file>
-        <file>Resources/Icon/llfr_ic_pause_off.png</file>
-        <file>Resources/Icon/llfr_ic_pause_on.png</file>
-        <file>Resources/Icon/llfr_ic_play_off.png</file>
-        <file>Resources/Icon/llfr_ic_play_on.png</file>
-        <file>Resources/Icon/llfr_ic_seek_start_off.png</file>
-        <file>Resources/Icon/llfr_ic_seek_start_on.png</file>
-        <file>Resources/Icon/llfr_ic_speed_0.5x_off.png</file>
-        <file>Resources/Icon/llfr_ic_speed_0.5x_on.png</file>
-        <file>Resources/Icon/llfr_ic_speed_2x_off.png</file>
-        <file>Resources/Icon/llfr_ic_speed_2x_on.png</file>
-        <file>Resources/Icon/llfr_ic_speed_4x_off.png</file>
-        <file>Resources/Icon/llfr_ic_speed_4x_on.png</file>
-        <file>Resources/Icon/llfr_ic_speed_10x_off.png</file>
-        <file>Resources/Icon/llfr_ic_speed_10x_on.png</file>
-        <file>Resources/Icon/PrimaryHandle.png</file>
-        <file>Resources/Icon/QCheckboxChecked.png</file>
-        <file>Resources/Icon/QCheckboxUnchecked.png</file>
-        <file>Resources/Icon/Wheel_BG.png</file>
-        <file>Resources/Icon/YWheel_Course.png</file>
-        <file>Resources/Icon/YWheel_Fine.png</file>
-        <file>Resources/Icon/YWheel_Fine2.png</file>
-        <file>Resources/Icon/ic_role_cartographer_off.png</file>
-        <file>Resources/Icon/ic_role_cartographer_on.png</file>
-    </qresource>
+    <qresource prefix="/"/>
     <qresource prefix="/fonts">
         <file>Resources/8277.ttf</file>
     </qresource>
@@ -139,16 +64,5 @@
         <file>Shaders/vertexshaderCube.vert</file>
         <file>Shaders/vertexshaderLight.vert</file>
         <file>Shaders/vertShGrid.vert</file>
-    </qresource>
-    <qresource prefix="/Map">
-        <file>Resources/Map/0_0.png</file>
-        <file>Resources/Map/0_1.png</file>
-        <file>Resources/Map/0_2.png</file>
-        <file>Resources/Map/1_0.png</file>
-        <file>Resources/Map/1_1.png</file>
-        <file>Resources/Map/1_2.png</file>
-        <file>Resources/Map/2_0.png</file>
-        <file>Resources/Map/2_1.png</file>
-        <file>Resources/Map/2_2.png</file>
     </qresource>
 </RCC>
