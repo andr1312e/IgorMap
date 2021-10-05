@@ -280,11 +280,6 @@ void BaseWidget::paintEvent(QPaintEvent*) {
     }
 }
 
-BaseLabel::BaseLabel(const QString &text, QWidget *parent)
-    : QLabel(text, parent)
-{
-    //setFixedWidth(text.size() * symbolSize);
-}
 
 RealValidator::RealValidator(const MeasureType &_type, QObject *parent)
     : QDoubleValidator(parent), type(_type)
@@ -426,64 +421,4 @@ void BaseLineEdit::focusOutEvent(QFocusEvent *evt)
         //qDebug() << "Qt::ActiveWindowFocusReason";
     }
     QLineEdit::focusOutEvent(evt);
-}
-
-BasePushButton::BasePushButton(const QString &text, QWidget *parent)
-    : QPushButton(text, parent)
-{
-    setFixedWidth((text.size() + 3) * symbolSize);
-    isTextButton = true;
-}
-
-BasePushButton::BasePushButton(const QString &iconOff, const QString &iconOn, QWidget *parent)
-    : QPushButton(parent)
-{
-    setStyleSheet(QString("QPushButton {background-color: none; color: none;}"
-                          "QPushButton:pressed {background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 255, 30, 150), stop:1 rgba(30, 255, 30, 100));"
-                          "color: #000000;}"));
-    iconNotSelected.load(iconOff);
-    iconSelected.load(iconOn);
-    setFixedSize(iconSelected.size());
-    isTextButton = false;
-    isSelected = false;
-    connect(this, &QPushButton::clicked, [&] {isSelected = !isSelected;});
-}
-
-bool BasePushButton::selected()
-{
-    return isSelected;
-}
-
-void BasePushButton::setSelected()
-{
-    isSelected = true;
-}
-
-void BasePushButton::paintEvent(QPaintEvent *event)
-{
-    if (!isTextButton) {
-        QPainter painter(this);
-
-        /*QRect border(0, 0, size().width() - 1, size().height() - 1);
-        // border
-        border.setCoords(0, 0, border.width() - 1, border.height() - 1);
-        QPen borderPen(QColor(100, 100, 100, 200));
-        painter.setPen(borderPen);
-        painter.drawRect(border);*/
-
-        // draw background
-        /*QRect bg = event->rect();
-        bg.setWidth(bg.width());
-        bg.setHeight(bg.height());
-        painter.fillRect(bg, Qt::transparent);*/
-
-        // draw icon
-        if (isSelected) {
-        //if (isEnabled()) {
-            painter.drawPixmap(0, 0, iconSelected);
-        } else {
-            painter.drawPixmap(0, 0, iconNotSelected);
-        }
-    }
-    QPushButton::paintEvent(event);
 }

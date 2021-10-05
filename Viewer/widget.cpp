@@ -386,20 +386,20 @@ void Widget::mouseReleaseEvent(QMouseEvent *event)
             }
         }
         else if (event->button() == Qt::RightButton) {
-            QVector3D tempVector = m_scene->screenToScene(event->screenPos());
-            qint32 idTrace = m_scene->traceGLData()->getIdByCoordinates(QPointF(tempVector.x(), tempVector.y()));
-            if (idTrace != -1) {
-                clickedTraceNumber = idTrace;
-                auto actionList = traceMenu->actions();
-                if (!actionList.isEmpty()) {
-                    actionList.at(0)->setText(QString("Трасса №%1").arg(clickedTraceNumber));
-                }
-                traceMenu->move(event->globalPos());
-                traceMenu->show();
-                isContextMenuVisible = true;
-                preHiddingContextMenu = false;
-                //qDebug() << "Click on LogBook of trace" << idTrace;
-            }
+//            QVector3D tempVector = m_scene->screenToScene(event->screenPos());
+//            qint32 idTrace = m_scene->traceGLData()->getIdByCoordinates(QPointF(tempVector.x(), tempVector.y()));
+//            if (idTrace != -1) {
+//                clickedTraceNumber = idTrace;
+//                auto actionList = traceMenu->actions();
+//                if (!actionList.isEmpty()) {
+//                    actionList.at(0)->setText(QString("Трасса №%1").arg(clickedTraceNumber));
+//                }
+//                traceMenu->move(event->globalPos());
+//                traceMenu->show();
+//                isContextMenuVisible = true;
+//                preHiddingContextMenu = false;
+//                //qDebug() << "Click on LogBook of trace" << idTrace;
+//            }
 
         }
     }

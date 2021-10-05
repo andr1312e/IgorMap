@@ -119,18 +119,6 @@ struct SharedSceneData{
     float ugmCenter;
 };
 
-struct PolarVerticesOfQuad
-{
-    PolarVerticesOfQuad() : leftBottom(),
-    rightBottom(),leftTop(),
-    rightTop() {}
-
-
-
-    Polar2 leftBottom, rightBottom,
-              leftTop, rightTop;
-};
-
 class MapGL : public QObject {
     Q_OBJECT
 
@@ -314,16 +302,15 @@ signals:
     void addSectorViewer(const quint8 size);
 
 public slots:
-    void presetSectorSlot(const quint8 index, SharedSectorParameters sharedSector);
+//    void presetSectorSlot(const quint8 index, SharedSectorParameters sharedSector);
     void excludeSectorSlot(const quint8 index);
-    void addSectorSlot(const quint8 index, SharedSectorParameters sharedSector);
+//    void addSectorSlot(const quint8 index, SharedSectorParameters sharedSector);
     void deleteSectorSlot(const quint8 index);
 
     void sectorInFocus(const quint8 index);
     void sectorOutFocus();
 
     void setColor(const QColor color);
-    void setBlinkingActions(const quint8 index, ActionsWithBlinkingSector action);
 
     void maxDistanceChangedSlot();
 
@@ -340,7 +327,6 @@ private:
     const Camera *camera_ptr;
     const SceneOptions *sceneOptions;
     QOpenGLShaderProgram *programSector;
-    SectorParameters lastParameters;
     const quint32 segmentation, sectorsCount;
     StateOfSectors sectorsState;
     QOpenGLVertexArrayObject *vao, *vaoAzUgm;
@@ -358,181 +344,10 @@ private:
     quint32 azUgmCounter;
 
     const SharedSceneData &shdData;
-    QVector<PolarVerticesOfQuad> polarVertices;
     quint16 storedAzValue, thresholdOfSensorsUpdate;
     qint16 storedUgmValue;
 };
 
-class KTAGLData : public QObject {
-    Q_OBJECT
-public:
-
-
-private:
-
-};
-
-struct TraceMark {
-    TraceMark() : id(0), xPos(0), yPos(0),
-        course(0), speed(0),
-        az(0), dist(0), h(0),
-        tracePosition(), logBookPosition(),
-        traceUgmPosition(), logBookUgmPosition(),
-        guideLineEnd(), edge(0),
-        guideLineEndUgm(), edgeUgm(0),
-        priority(0),
-        showTrack(false) {}
-
-    quint32 id;
-    float xPos;
-    float yPos;
-    float course;
-    float speed;
-    float az;
-    float dist;
-    float h;
-    float ugm;
-    float xUgmPos;
-    float yUgmPos;
-
-    ColumnRow tracePosition;
-    ColumnRow logBookPosition;
-    ColumnRow traceUgmPosition;
-    ColumnRow logBookUgmPosition;
-    QPointF guideLineEnd;
-    quint8 edge;
-    QPointF guideLineEndUgm;
-    quint8 edgeUgm;
-
-    quint8 priority;
-    bool showTrack;
-};
-
-struct TrackMark
-{
-    TrackMark() : pos(0,0), posExtended(0,0), course(0) {}
-
-    QPointF pos;
-    QPointF posExtended;
-    float course;
-};
-
-struct TrackMarkInfo {
-    quint16 trackBufferId;
-    quint16 currentPositionInVector;
-    QVector<QVector3D> vectorOfTrackXY;
-};
-
-using MapOfTraceMark = QMap< quint32, TraceMark >;
-using MapOfTraceTrack = QMap <quint32, TrackMarkInfo >;
-using MapOfGrideOfTraceMark = QMap< ColumnRow, QMap<quint32, quint8> >;
-
-class TraceGLData : public QObject {
-    Q_OBJECT
-public:
-    explicit TraceGLData(QOpenGLFunctions_3_3_Core *func,
-                         const Camera *m_camera,
-                         const Camera *m_extraCamera,
-                         float _depth,
-                         SharedSceneData &sharedSceneData,
-                         QObject *parent = nullptr);
-    void setSceneOptions(const SceneOptions *sOptions);
-    void prepare();
-    void render();
-    void renderHAz();
-    void prepareGrideForTrace();
-    qint32 getIdByCoordinates(QPointF point);
-
-signals:
-    void traceInfoToExtraWindow(quint16 id, quint16 h);
-    void addExtraWindowSignal(quint16 id);
-    void msgToVOI(QByteArray msg);
-    void trackDrawingReset();
-
-    void traceDistance(qint32 idObject, float dist);
-    void clearTraceOnGrid(qint32 idObject);
-
-public slots:
-    void eraseOldTrace(quint32 idTrace);
-
-    void setLogBookColor(const QColor color);
-    void setTraceColor(const QColor color);
-    void setTextColor(const QColor color);
-    void setTextSize(const TextSizeAction flag, const float value);
-
-    void reCalcAllTrace();
-
-    //void interactiveActionsWithTrack(quint32 id, ActionsWithTrack action, quint32 addParameter);
-    void drawTrace(quint32 id, bool isDrawing);
-
-private:
-    void calcRect(const OpenGLRectF &rect, GLfloat *array, int counter, float &zcoord, float alpha = 0);
-    void putTraceOnScene(TraceMark &mark, bool isNewTrace = true);
-    void findPlaceForLogBook(TraceMark &mark, const quint32 offsetLB);
-    void calcGuideLinePoint(TraceMark &mark, const quint32 offset);
-
-    //void initTrackBuffer(quint32 id);
-
-private:
-    QOpenGLFunctions_3_3_Core *glFunc;
-    const Camera *camera_ptr, *extraCamera_ptr;
-    const float depth;
-    const SceneOptions *sceneOptions;
-    QOpenGLShaderProgram *programTrace, *programFont, *programLogBook, *programTrack;
-    QOpenGLBuffer *vboFont, *tVbo, *tVbo2, *trackVBO;
-    QOpenGLVertexArrayObject *vaoFont, *tVao, *tVao2, *trackVAO;
-
-    const quint8 nDimensional;
-    //QVector<QOpenGLBuffer *> vbo;
-    //QVector<QOpenGLVertexArrayObject*> vao;
-    //QVector<OpenGLRectF> logBookRect;
-
-    quint32 traceBuffSize;
-
-    MapOfTraceMark mapTraceMark;
-    MapOfGrideOfTraceMark grideOfTraceMark;
-    const quint32 offsetForLogBook, offsetForLogBookUgm;
-
-//    ftCustomSimple *fontDriver;
-
-    const QSizeF defaultLogBookSize;    
-    QSizeF logBookSize;
-    OpenGLRectF grideRect;
-
-    QColor logBookColor, traceColor, textColor;
-    float textSize;
-
-    const float distOffsetForAzH;
-    QMap<quint16, quint32> mapOfTrackBufferId;
-    QSet<quint16> setOfFreeBufferID;
-    MapOfTraceTrack mapOfTraceTrack;
-    const quint32 maxVerticesOfTrack, maxTrackNumber;
-    quint32 currentValueOfTrackVertices;
-
-    SharedSceneData &shdData;
-};
-
-
-
-struct PrivateRayInfo {
-    PrivateRayInfo() : azMin(0), azMax(0), ugm(0), distMin(0), distMax(0) {}
-    PrivateRayInfo(float _azMin, float _azMax, float _ugm, float _distMin, float _distMax) :
-        azMin(_azMin), azMax(_azMax), ugm(_ugm), distMin(_distMin), distMax(_distMax) {}
-    float azMin;
-    float azMax;
-    float ugm;
-    float distMin;
-    float distMax;
-};
-
-
-using ListOfOffsetAndCountRays = QList<QPair <quint8, quint32> >;
-
-class RayGLData : public QObject {
-    Q_OBJECT
-public:
-
-};
 
 
 
@@ -577,10 +392,6 @@ public:
 
     QOpenGLShaderProgram* shaderProgram() const { return m_programGrid; }
     SectorsGLData* sectorsGLData() const { return m_sectorsGLData; }
-    KTAGLData* ktaGLData() const { return ktaData; }
-    TraceGLData* traceGLData() const { return traceData; }
-    RayGLData* rayGLData() const { return rayData; }
-    DSPGLData *dspGLData() const { return dspData; }
     MapGL *mapGLData() const { return mapGL; }
 
     Camera *getCameraPtr() const { return m_camera; }
@@ -637,7 +448,6 @@ private:
     void prepareFontArray();
     void prepareExtraWindow();
 
-    bool calcSector(SharedSectorParameters sharedSector);
 
     void renderExtraWindow();
     void calcRect(const OpenGLRectF &rect, GLfloat *array, int counter, float &zcoord);
@@ -691,7 +501,7 @@ private:
     SectorsGLData *m_sectorsGLData;
 
     const QSize extraWindow;
-//    ftCustom *customFontDriver;
+
 
     Camera* m_cameraExtraWindow;
     QOpenGLBuffer *m_vboBackGroundWindow, *m_vboBackGroundChart,
@@ -707,7 +517,7 @@ private:
     QRect buttonAltitudeQRect, buttonDSPQRect, buttonNTQRect;
     int hoveredItem, selectedItem;
 
-    //QVector<ExtraWindow*> vectorExtraWindows;
+
 
     QOpenGLBuffer *vboRect, *vboRect2;
     QOpenGLVertexArrayObject *vaoRect, *vaoRect2;
@@ -715,10 +525,6 @@ private:
 
     SharedSceneData sharedSceneData;
 
-    KTAGLData *ktaData;
-    TraceGLData *traceData;
-    RayGLData *rayData;
-    DSPGLData *dspData;
     MapGL *mapGL;
 
     QColor backgroundColor;

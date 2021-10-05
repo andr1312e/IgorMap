@@ -66,48 +66,11 @@ enum WidgetTypes {
     Training
 };
 
-enum SectorType {
-    StaticPlacement,
-    DynamicPlacement,
-    PointPlacement
-};
-
-enum ActionsWithTrack{
-    Priority,
-    Delete,
-    Extend,
-    Trace,
-    Correction
-};
-
-enum ActionsWithBlinkingSector{
-    Reverse,
-    ResetValue
-};
-
-struct SectorParameters {
-    SectorParameters()
-        : distMin(0), distMax(0), azMin(0), azMax(0), ugmMin(0), ugmMax(0)
-    { }
-    SectorParameters(float dmin, float dmax, float amin, float amax, float umin, float umax)
-        : distMin(dmin), distMax(dmax), azMin(amin), azMax(amax), ugmMin(umin), ugmMax(umax)
-    { }
-
-    float distMin, distMax;
-    float azMin, azMax;
-    float ugmMin, ugmMax;
-};
-
 enum ItemState {
     Active,
     Excluded,
     Empty
 };
-
-using SharedSectorParameters = QSharedPointer<const SectorParameters>;
-using SectorsVector = QVector<QPair<ItemState, SectorParameters> >;
-using SharedSectorsVector = QSharedPointer<const SectorsVector>;
-using SharedSectorParameters = QSharedPointer<const SectorParameters>;
 
 struct RayInfo {
     RayInfo() : az(0), ugm(0)/*, id(0), mode(0)*/ {}

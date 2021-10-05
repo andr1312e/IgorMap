@@ -67,37 +67,6 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 };
 
-class BasePushButton : public QPushButton
-{
-    Q_OBJECT
-public:
-    explicit BasePushButton(const QString &text, QWidget *parent = nullptr);
-    explicit BasePushButton(const QString &iconOff, const QString &iconOn, QWidget *parent = nullptr);
-
-    bool selected();
-    void setSelected();
-
-private:
-    QPixmap iconNotSelected, iconSelected;
-    bool isTextButton = true;
-    const quint8 symbolSize = 10;
-    bool isSelected = false;
-
-protected:
-    void paintEvent(QPaintEvent *event) override;
-
-};
-
-class BaseLabel : public QLabel
-{
-    Q_OBJECT
-public:
-    explicit BaseLabel(const QString &text, QWidget *parent = nullptr);
-
-private:
-    const quint8 symbolSize = 10;
-};
-
 class RealValidator : public QDoubleValidator
 {
     Q_OBJECT
