@@ -1,8 +1,15 @@
 # OpenStreetMap Tiles Server
 
-Simple and Quik Tile Server with maps of Russia written in QT
+Simple and Quik Tile Server with maps of Russia(CIS) and America written in QT widgets and openGL
 
-Rendered Files in folder
+Tiles format: SVG
+
+How to:
+
+- Start viewer
+- Start server
+
+Server cache saved in jpg folder
 
 Screenshots:
 
