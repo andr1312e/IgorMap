@@ -10,7 +10,7 @@ How to:
 - Start server
 
 Server cache saved in jpg folder
-
+Dont't foret to put settings.ini file in folder in you use shadow build
 Screenshots:
 
 ![1](.//images//1.png)

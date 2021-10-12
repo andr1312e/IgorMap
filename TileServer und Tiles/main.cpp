@@ -15,10 +15,10 @@ void createFoldersForRenderedImages(const QString &pathToRenderedImages)
         if(!(QDir(pathToRenderedImages+QString::number(i)+"/noAzm").exists()))
         {
             QDir().mkdir(pathToRenderedImages+QString::number(i)+"/noAzm");
-            QImage image(QSize(497, 279), QImage::Format_ARGB32);
-            image.fill(Qt::white);
-            image.save(pathToRenderedImages+QString::number(i)+"/noAzm/"+"white.jpg");
         }
+        QImage image(QSize(497, 279), QImage::Format_ARGB32);
+        image.fill(Qt::white);
+        image.save(pathToRenderedImages+"white.jpg");
 
     }
 }

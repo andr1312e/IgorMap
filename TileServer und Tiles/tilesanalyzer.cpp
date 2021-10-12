@@ -12,17 +12,17 @@ TilesAnalyzer::TilesAnalyzer(const QString *pathToSourceSvg,const QString *pathT
     , m_latAndLong(new std::array<tileIndex, 9>())
     , m_total(m_latAndLong->end())
     , m_slash(new QString(QStringLiteral("/")))
-    , m_whiteJpg(new QString(QStringLiteral("/noAzm/white")))
     , m_underscore(new QString(QStringLiteral("_")))
     , m_threadFileReader(new ThreadImageRotator(pathToSourceSvg, pathToRendedImage, fileType, m_slash, nullptr))
     , m_index(0)
 {
+    m_whiteJpg.append(*pathToRendedImage).append("/white").append(*m_fileType);
 }
 
 TilesAnalyzer::~TilesAnalyzer()
 {
-    delete m_whiteJpg;
     delete m_slash;
+    delete m_underscore;
     delete m_qDir;
     delete m_tilesToConvertAzm;
     delete m_latAndLong;
@@ -286,15 +286,15 @@ void TilesAnalyzer::findIndexsOfUnRenderedTiles(QJsonArray *jsonArray, QStringLi
     {
         if (it->first<0||it->second<0)
         {
-           jsonArray->replace(m_index, *m_pathToRendedImage+m_layer+*m_whiteJpg+*m_fileType);
+           jsonArray->replace(m_index, m_whiteJpg);
         }
         else
         {
-            m_tileIndex=QString::number(it->first)+*m_underscore+ QString::number(it->second);
+            m_tileIndex.append(QString::number(it->first)).append(*m_underscore).append(QString::number(it->second));
             qDebug()<< m_tileIndex;
             if (hasMapWorldLayer->at(it->first*numOfTiles+it->second))
             {
-                fullPathToTile=pathToResultAzmTiles+*m_slash+m_tileIndex+*m_fileType;
+                fullPathToTile.append(pathToResultAzmTiles).append(m_tileIndex).append(*m_fileType);
                 if(!QFile::exists(fullPathToTile))
                 {
                     tilesToConvertAzm->append(m_tileIndex);
@@ -302,10 +302,11 @@ void TilesAnalyzer::findIndexsOfUnRenderedTiles(QJsonArray *jsonArray, QStringLi
             }
             else
             {
-                fullPathToTile=*m_pathToSourceSvg+m_layer+*m_slash+m_tileIndex+*m_fileType;
+                fullPathToTile.append(*m_pathToSourceSvg).append(m_layer).append(*m_slash).append(m_tileIndex).append(*m_fileType);
             }
             jsonArray->replace(m_index, fullPathToTile);
-
+            m_tileIndex.clear();
+            fullPathToTile.clear();
         }
         m_index++;
     }
@@ -418,19 +419,17 @@ void TilesAnalyzer::analyzing(float &latitude, float &longtutude, int &layer, in
     {
         m_tilesToConvertAzm->clear();
     }
-//    qInfo()<<"Начало работы программы";
     searchTilesIndexs(latitude, longtutude, layer);
     m_layer=QString::number(layer);
     m_azm=QString::number(azm).rightJustified(3, '0', true);
-    pathToResultAzmTiles=*m_pathToRendedImage+m_layer+*m_slash+m_azm;
+    pathToResultAzmTiles.append(*m_pathToRendedImage).append(m_layer).append(*m_slash).append(m_azm).append(*m_slash);
     m_qDir->mkdir(pathToResultAzmTiles);
     findIndexsOfUnRenderedTiles(jsonArray, m_tilesToConvertAzm, layer, pathToResultAzmTiles);
-//    qDebug()<<"Тайлы которые будут возвращены" << *jsonArray;
-//    qDebug()<<*m_tilesToConvertAzm;
     m_numTilesToConvertAzm=m_tilesToConvertAzm->size();
     if (m_numTilesToConvertAzm>0)
     {
         m_threadFileReader->gettingTilesToConvert(*m_tilesToConvertAzm, m_numTilesToConvertAzm, m_azm, m_layer);
     }
     addWidthHeightAndLatLongToList(layer, w1, h1, w2, h2, w3, h3, w4, p1_lat, p1_long, p2_lat, p2_long);
+    pathToResultAzmTiles.clear();
 }

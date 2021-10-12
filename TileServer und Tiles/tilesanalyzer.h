@@ -40,8 +40,8 @@ private:
     std::array<tileIndex, 9> *m_latAndLong;
     std::array<tileIndex, 9>::iterator m_total;
     const QString *m_slash;
-    const QString *m_whiteJpg;
     const QString *m_underscore;
+    QString m_whiteJpg;
 
     ThreadImageRotator *m_threadFileReader;
 
