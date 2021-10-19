@@ -33,8 +33,8 @@ void TilesAnalyzer::searchTilesIndexs(float &currentLatitude, float &currentLong
     //latitude - широта.  longtitude долгота; широта вверх. долгота вправо!!!!!
     //если currentLongitude <0 то отнимаем от 360 наше число. Так как 179.9|-180 а нам надо 179.9|181
     //    currentLongitude=currentLongitude<0 ? (360+currentLongitude) : currentLongitude;
-    const QVector<float> *currentLayerLatitudes=&latitudes.at(layer);
-    const QVector<float> *currentLayerLongtitudes=&longtitudes.at(layer);
+    const std::vector<float> *currentLayerLatitudes=&latitudes.at(layer);
+    const std::vector<float> *currentLayerLongtitudes=&longtitudes.at(layer);
     int startIndex=0, lastIndexLat=latitudesVectorSize.at(layer), centerIndexLat=centerLatitudesVector.at(layer), difference, lastIndexLongt=longtitudesVectorSize.at(layer), centerIndexLong=centerLongtitudesVector.at(layer);
     //По долготе. долгота ВПРАВО!!!!!
     if (currentLongitude>=currentLayerLongtitudes->at(startIndex+1)&&currentLongitude<=currentLayerLongtitudes->at(lastIndexLongt-2))
@@ -317,10 +317,10 @@ void TilesAnalyzer::findIndexsOfUnRenderedTiles(QJsonArray *jsonArray, QStringLi
 void TilesAnalyzer::addWidthHeightAndLatLongToList(int &layer, float &w1, float &h1, float &w2, float &h2, float &w3, float &h3, float &w4, float &p1_lat, float &p1_long, float &p2_lat, float &p2_long)
 {
     //check
-    const QVector<float> *width=&bottomAndTopDistance.at(layer);
-    const QVector<float> *height=&leftAndRightDistance.at(layer);
-    const QVector<float> *currentLayerLatitudes=&latitudes.at(layer);
-    const QVector<float> *currentLayerLongtitudes=&longtitudes.at(layer);
+    const std::vector<float> *width=&bottomAndTopDistance.at(layer);
+    const std::vector<float> *height=&leftAndRightDistance.at(layer);
+    const std::vector<float> *currentLayerLatitudes=&latitudes.at(layer);
+    const std::vector<float> *currentLayerLongtitudes=&longtitudes.at(layer);
     if (m_latAndLong->at(1).first==-1|| m_latAndLong->at(1).second==-1)
     {
         w1=900.0f;
