@@ -1,7 +1,0 @@
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\bin\Debug\mapDownloader11.exe.config
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\bin\Debug\mapDownloader11.exe
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\bin\Debug\mapDownloader11.pdb
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\obj\Debug\mapDownloader11.csprojAssemblyReference.cache
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\obj\Debug\mapDownloader11.csproj.CoreCompileInputs.cache
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\obj\Debug\mapDownloader11.exe
-E:\Релиз\Программы компаньоны\Скачивальщики карт по слоям\11\mapDownloader11\obj\Debug\mapDownloader11.pdb
