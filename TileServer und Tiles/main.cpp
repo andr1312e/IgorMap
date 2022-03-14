@@ -1,7 +1,7 @@
 #include <QApplication>
 #include "server.h"
 
-void createFoldersForRenderedImages(const QString &pathToRenderedImages)
+void CreateFoldersForRenderedImages(const QString &pathToRenderedImages)
 {
     if(!(QDir(pathToRenderedImages).exists()))
     {
@@ -12,13 +12,13 @@ void createFoldersForRenderedImages(const QString &pathToRenderedImages)
         {
             QDir().mkdir(pathToRenderedImages+QString::number(i));
         }
-        if(!(QDir(pathToRenderedImages+QString::number(i)+"/noAzm").exists()))
+        if(!(QDir(pathToRenderedImages+QString::number(i)+QStringLiteral("/noAzm")).exists()))
         {
-            QDir().mkdir(pathToRenderedImages+QString::number(i)+"/noAzm");
+            QDir().mkdir(pathToRenderedImages+QString::number(i)+QStringLiteral("/noAzm"));
         }
         QImage image(QSize(497, 279), QImage::Format_ARGB32);
         image.fill(Qt::white);
-        image.save(pathToRenderedImages+"white.jpg");
+        image.save(pathToRenderedImages+QStringLiteral("white.jpg"));
 
     }
 }
@@ -26,23 +26,23 @@ void createFoldersForRenderedImages(const QString &pathToRenderedImages)
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    const QString m_programDirectory=QDir::currentPath()+"/";
-    QString m_renderedImageType=QStringLiteral(".jpg");
-    const QString pathToSourcesSvg=m_programDirectory+"svg/";
-    const QString pathToRenderedImages=m_programDirectory+"jpg/";
+    const QString m_programDirectory=QDir::currentPath()+QStringLiteral("/");
+    const QString m_renderedImageType=QStringLiteral(".jpg");
+    const QString pathToSourcesSvg=m_programDirectory+QStringLiteral("svg/");
+    const QString pathToRenderedImages=m_programDirectory+QStringLiteral("jpg/");
     if(!(QDir(pathToSourcesSvg).exists()))
     {
-        qInfo()<<"ПАПКИ ТАЙЛОВ НЕТ!!!!!!!!!!!!!!";
-        qInfo()<<"pathToSourceSvg: " + pathToSourcesSvg;
+        qInfo()<<QStringLiteral("ПАПКИ ТАЙЛОВ НЕТ!!!!!!!!!!!!!!").toUtf8().constData();
+        qInfo()<<QStringLiteral("pathToSourceSvg: ") + pathToSourcesSvg;
         return 0;
     }
     else
     {
-        qInfo()<<"Путь к исходным изображениям: " + pathToSourcesSvg;
-        qInfo()<<"Путь к полученным изображениям: " +pathToRenderedImages;
-        createFoldersForRenderedImages(pathToRenderedImages);
-        qInfo()<<"Программа запущена";
-        Server renderServer(&pathToSourcesSvg, &pathToRenderedImages, &m_renderedImageType, nullptr);
+        qInfo()<<QStringLiteral("Путь к исходным изображениям: ") + pathToSourcesSvg;
+        qInfo()<<QStringLiteral("Путь к полученным изображениям: ") +pathToRenderedImages;
+        CreateFoldersForRenderedImages(pathToRenderedImages);
+        qInfo()<<QStringLiteral("Программа запущена");
+        Server renderServer(pathToSourcesSvg, pathToRenderedImages, m_renderedImageType, Q_NULLPTR);
         return app.exec();
     }
 }

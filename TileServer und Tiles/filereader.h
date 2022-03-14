@@ -12,20 +12,20 @@ class ImageRotator : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImageRotator(const QString *pathToSourceSvg,const QString *pathToRendedImage,const QString *fileType, const QString *slash, const QString *svgType, QObject *parent);
+    explicit ImageRotator(const QString &pathToSourceSvg, const QString &pathToRendedImage, const QString &fileType, const char slash, const QString &svgType, QObject *parent);
     ~ImageRotator();
-    void setParams(QString &tile, QString &azm, QString &layer, char &firstNum, char &secondNum, char &thirdNum);
+    void SetParams(const QString &tile, QString &azm, QString &layer, char firstNum, char secondNum, char thirdNum);
 private:
-    QFile *m_file;
-    const QString *m_pathToSourceSvgFolder;
-    const QString *m_pathToRendedImageFolder;
-    const QString *m_fileType;
-    const QString *m_slash;
-    const QString *m_svgType;
+    QFile * const m_file;
+    const QString m_pathToSourceSvgFolder;
+    const QString m_pathToRendedImageFolder;
+    const QString m_fileType;
+    const char m_slash;
+    const QString m_svgType;
 
-    QImage *m_image;
-    QSvgRenderer *m_renderer;
-    QPainter *m_painter;
+    QImage *const m_image;
+    QSvgRenderer * const m_renderer;
+    QPainter *const m_painter;
     QString m_pathToSource;
     QString m_pathToRender;
     int index;
@@ -36,11 +36,14 @@ private:
     char m_secondNum;
     char m_thirdNum;
 
+    const char m_openBracket;
+    const char m_whiteSpace;
+
     QByteArray m_array;
 
 public Q_SLOTS:
-    void doing();
+    void OnMakingImage();
 Q_SIGNALS:
-    void finished();
+    void ToFinished();
 };
 #endif // FILEREADER_H

@@ -1,6 +1,6 @@
 #include "server.h"
 
-Server::Server(const QString *pathToSourceSvg,const QString *pathToRendedImage,const QString *fileType, QObject *parent)
+Server::Server(const QString &pathToSourceSvg,const QString &pathToRendedImage,const QString &fileType, QObject *parent)
     : QObject(parent)
     , m_serverIsFree(true)
     , m_tileAnalyzer(new TilesAnalyzer(pathToSourceSvg, pathToRendedImage, fileType))
@@ -8,26 +8,26 @@ Server::Server(const QString *pathToSourceSvg,const QString *pathToRendedImage,c
     , m_tcpServer(new QTcpServer())
     , m_jsonObject(new QJsonObject)
     , m_jsonArray(new QJsonArray())
-    , latitudeKey(QStringLiteral("latitude"))
-    , longtitudeKey(QStringLiteral("longtitude"))
-    , azimutKey(QStringLiteral("azimut"))
-    , layerKey(QStringLiteral("layer"))
-    , filePathsKey(QStringLiteral("filePaths"))
-    , w1Key(QStringLiteral("w1"))
-    , w2Key(QStringLiteral("w2"))
-    , w3Key(QStringLiteral("w3"))
-    , w4Key(QStringLiteral("w4"))
-    , h1Key(QStringLiteral("h1"))
-    , h2Key(QStringLiteral("h2"))
-    , h3Key(QStringLiteral("h3"))
-    , p1_latKey(QStringLiteral("p1_lat"))
-    , p1_longKey(QStringLiteral("p1_long"))
-    , p2_latKey(QStringLiteral("p2_lat"))
-    , p2_longKey(QStringLiteral("p2_long"))
+    , latitudeKey(QLatin1String("latitude"))
+    , longtitudeKey(QLatin1String("longtitude"))
+    , azimutKey(QLatin1String("azimut"))
+    , layerKey(QLatin1String("layer"))
+    , filePathsKey(QLatin1String("filePaths"))
+    , w1Key(QLatin1String("w1"))
+    , w2Key(QLatin1String("w2"))
+    , w3Key(QLatin1String("w3"))
+    , w4Key(QLatin1String("w4"))
+    , h1Key(QLatin1String("h1"))
+    , h2Key(QLatin1String("h2"))
+    , h3Key(QLatin1String("h3"))
+    , p1_latKey(QLatin1String("p1_lat"))
+    , p1_longKey(QLatin1String("p1_long"))
+    , p2_latKey(QLatin1String("p2_lat"))
+    , p2_longKey(QLatin1String("p2_long"))
 {
-    resizeJsonArray();
-    createConnections();
-    startServer();
+    ResizeJsonArray();
+    CreateConnections();
+    StartServer();
 }
 
 Server::~Server()
@@ -38,24 +38,20 @@ Server::~Server()
     delete m_jsonObject;
 }
 
-void Server::login()
+void Server::OnLogin()
 {
     m_tcpSocket = m_tcpServer->nextPendingConnection();
-    if (m_tcpSocket->state() == QAbstractSocket::ConnectedState)
+    if (QAbstractSocket::ConnectedState == m_tcpSocket->state())
     {
-        connect(m_tcpSocket, &QTcpSocket::disconnected,
-                this, &Server::logout
-                );
-        connect(m_tcpSocket, &QTcpSocket::readyRead,
-                this, &Server::jsonGet
-                );
+        connect(m_tcpSocket, &QTcpSocket::disconnected,this, &Server::OnLogout);
+        connect(m_tcpSocket, &QTcpSocket::readyRead,this, &Server::OnJsonGet);
     }
 }
-void Server::jsonGet()
+void Server::OnJsonGet()
 {
     if (m_serverIsFree)
     {
-        qInfo()<<"Сервер принял сообщение";
+//        qInfo()<<QStringLiteral("Сервер принял сообщение");
         const QJsonDocument jsonDoc=QJsonDocument::fromJson(m_tcpSocket->readAll(), m_parseError);
         if (m_parseError->error == noError)
         {
@@ -67,24 +63,24 @@ void Server::jsonGet()
                 m_azimut=jsonDoc.operator[](azimutKey).toInt();
                 m_layer=jsonDoc.operator[](layerKey).toInt();
                 qInfo()<< "layer " << m_layer << " azimut " << m_azimut << " lat= " << latitude << " long " << longtitude;
-                m_tileAnalyzer->analyzing(latitude, longtitude, m_layer, m_azimut, m_jsonArray, bottomLineTileWidth, bottomLineTileHeight, centerLineTileWidth, centerLineTileHeight, topLineTileWidth, topLineTileHeight, topTileWidth, centerTileBottomLatitude, centerTileBottomLongtitude, centerTileTopLatitude, centerTileTopLongtitude);
-                jsonSend();
+                m_tileAnalyzer->Analyzing(latitude, longtitude, m_layer, m_azimut, m_jsonArray, bottomLineTileWidth, bottomLineTileHeight, centerLineTileWidth, centerLineTileHeight, topLineTileWidth, topLineTileHeight, topTileWidth, centerTileBottomLatitude, centerTileBottomLongtitude, centerTileTopLatitude, centerTileTopLongtitude);
+                OnJsonSend();
             }
         }
     }
 }
-void Server::logout()
+void Server::OnLogout()
 {
     m_tcpSocket->close();
     m_serverIsFree=true;
 }
-void Server::error()
+void Server::OnError()
 {
     Q_UNUSED(m_tcpSocket);
     m_serverIsFree=true;
     qInfo()<<"Connection Error";
 }
-void Server::jsonSend()
+void Server::OnJsonSend()
 {
     m_jsonObject->insert(filePathsKey, *m_jsonArray);
     m_jsonObject->insert(w1Key, bottomLineTileWidth);
@@ -101,32 +97,30 @@ void Server::jsonSend()
     m_jsonObject->insert(p2_longKey, centerTileTopLongtitude);
 
     const QByteArray jsonData = QJsonDocument(*m_jsonObject).toJson();
-//    qDebug()<< jsonData;
-    if (m_tcpSocket->state() == QAbstractSocket::ConnectedState) {
+
+    if (QAbstractSocket::ConnectedState == m_tcpSocket->state()) {
         m_tcpSocket->write(jsonData);
         m_tcpSocket->flush();
     }
     m_serverIsFree=true;
-    //    qInfo()<<"Send to client";
+
 }
 
-void Server::resizeJsonArray()
+void Server::ResizeJsonArray()
 {
     for (int i=0; i<9; i++)
     {
-        m_jsonArray->insert(i, "");
+        m_jsonArray->insert(i, QLatin1String());
     }
 }
 
-void Server::createConnections()
+void Server::CreateConnections()
 {
-    connect(m_tcpServer, &QTcpServer::newConnection,
-            this, &Server::login);
-    connect(m_tcpServer, &QTcpServer::acceptError,
-            this, &Server::error);
+    connect(m_tcpServer, &QTcpServer::newConnection,this, &Server::OnLogin);
+    connect(m_tcpServer, &QTcpServer::acceptError,this, &Server::OnError);
 }
 
-void Server::startServer()
+void Server::StartServer()
 {
     if(!m_tcpServer->listen(QHostAddress::LocalHost, 14000))
     {

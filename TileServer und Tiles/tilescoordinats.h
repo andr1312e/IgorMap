@@ -15,7 +15,7 @@ static const std::array<int, 12> centerLongtitudesVector={0, 0, 0, 0, 0, 4, 8, 1
 //колличество индексов тайлов по долготе
 static const std::array<int, 12> latitudesVectorSize={0, 0, 0, 0, 0, 6, 11, 21, 41, 81, 161, 321};
 //и для второго
-static const std::array<int, 12> centerLatitudesVector={0, 0, 0, 0, 0, 3, 6, 10, 20, 40, 80, 160};
+static const std::array<int, 12> centerLatitudesVector={0, 0, 0, 0, 0, 2, 6, 10, 20, 40, 80, 160};
 //колличество тайлов вверх для поиска есть ли слова
 static const std::array<int, 12> numLatitudeTiles={0, 0, 0, 0, 0, 5, 10, 20, 40, 80, 161, 320};
 //ПОЛОВИНА смещения по широте

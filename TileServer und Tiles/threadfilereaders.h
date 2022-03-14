@@ -6,16 +6,18 @@
 #include <QThread>
 #include <QTimer>
 #include <QList>
+#include <QTimerEvent>
 #include <QString>
 #include <QStringList>
 #include <queue>
+#include <map>
 
 struct TileData
 {
     QString tile;
     QString azm;
     QString layer;
-    TileData(QString &_tile,QString &_azm, QString &_layer)
+    TileData(const QString &_tile,const QString &_azm,const QString &_layer)
     {
         tile=_tile;
         azm=_azm;
@@ -27,24 +29,22 @@ class ThreadImageRotator : public QObject
 {
     Q_OBJECT
 public:
-    explicit ThreadImageRotator(const QString *pathToSourceSvg,const QString *pathToRendedImage,const QString *fileType, const QString *slash, QObject *parent);
-    void operator=( const ThreadImageRotator& ) = delete;
+    explicit ThreadImageRotator(const QString &pathToSourceSvg, const QString &pathToRendedImage, const QString &fileType, const char slash, QObject *parent);
     ~ThreadImageRotator();
 public Q_SLOTS:
-    void gettingTilesToConvert(QStringList &tiles, int &numOfTilesToConvert, QString &azm, QString &layer);
-    void seekAvailableThreads();
-    void addThreadToQueue();
-    void readFilesFromQueue();
+    void GettingTilesToConvert(std::list<QString> &tiles, int &numOfTilesToConvert, QString &azm, QString &layer);
+    void OnSeekAvailableThreads();
+    void OnAddFreeThreadToQueue();
+    void ReadFilesFromQueue();
+protected:
+    virtual void timerEvent(QTimerEvent *event) Q_DECL_OVERRIDE;
 private:
-    void initTimer();
-    void createDataStructs(const QString *pathToSourceSvg, const QString *pathToRendedImage, const QString *fileType, const QString *slash);
-    void createConnections();
+    void CreateDataStructs(const QString &pathToSourceSvg, const QString &pathToRendedImage, const QString &fileType, char slash);
 private:
-    QTimer *m_timer;
-    QHash<QThread*, ImageRotator*> *m_imageRotatorHash;
-    std::queue<QThread*> *m_freeThreadsQueue;
-    std::queue<TileData> *m_tilesQueue;
-    const QString *m_svgType;
+    std::map<QThread*, ImageRotator*> * const m_imageRotatorHash;
+    std::queue<QThread*> * const m_freeThreadsQueue;
+    std::queue<TileData> * const m_tilesQueue;
+    const QString m_svgType;
     const int m_numOfThreads=9;
     const int m_timerInterval=100;
 };

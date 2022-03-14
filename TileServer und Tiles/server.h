@@ -13,31 +13,31 @@ class Server : public QObject
 {
     Q_OBJECT
 public:
-    explicit Server(const QString *pathToSourceSvg,const QString *pathToRendedImage,const QString *fileType, QObject *parent);
+    explicit Server(const QString &pathToSourceSvg, const QString &pathToRendedImage, const QString &fileType, QObject *parent);
     ~Server();
 public Q_SLOTS:
-    void login();
-    void jsonGet();
-    void logout();
-    void error();
-    void jsonSend();
+    void OnLogin();
+    void OnJsonGet();
+    void OnLogout();
+    void OnError();
+    void OnJsonSend();
 private:
-    void resizeJsonArray();
-    void createConnections();
-    void startServer();
+    void ResizeJsonArray();
+    void CreateConnections();
+    void StartServer();
 private:
     bool m_serverIsFree;
-    TilesAnalyzer* m_tileAnalyzer;
+    TilesAnalyzer* const m_tileAnalyzer;
     float latitude;
     float longtitude;
     int m_azimut;
     int m_layer;
-    QJsonParseError *m_parseError;
-    QTcpServer* m_tcpServer;
+    QJsonParseError * const m_parseError;
+    QTcpServer* const m_tcpServer;
     QTcpSocket* m_tcpSocket;
-    QJsonObject* m_jsonObject;
-    QJsonParseError::ParseError noError=QJsonParseError::NoError;
-    QJsonArray *m_jsonArray;
+    QJsonObject* const m_jsonObject;
+    const QJsonParseError::ParseError noError=QJsonParseError::NoError;
+    QJsonArray * const m_jsonArray;
 private:
     float bottomLineTileWidth;
     float bottomLineTileHeight;
